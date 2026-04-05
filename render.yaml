@@ -3,7 +3,7 @@ services:
     name: wa-bot-platform
     runtime: node
     region: oregon
-    plan: starter
+    plan: free
     buildCommand: npm install -g pnpm && pnpm install && pnpm --filter platform build && pnpm --filter api-server build
     startCommand: node artifacts/api-server/dist/index.js
     envVars:
@@ -24,7 +24,7 @@ services:
 
 databases:
   - name: wa-bot-db
-    plan: starter
+    plan: free
     region: oregon
     databaseName: wabotplatform
     user: wabotuser
