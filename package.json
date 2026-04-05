@@ -1,0 +1,13 @@
+{
+  "name": "saas-whatsapp-bot",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --parallel -r dev",
+    "build": "pnpm --filter api-server build && pnpm --filter platform build",
+    "start": "pnpm --filter api-server start"
+  },
+  "workspaces": [
+    "artifacts/*"
+  ]
+}
